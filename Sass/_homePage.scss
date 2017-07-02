@@ -32,11 +32,17 @@
         .tlt {
             margin: 70px 0;
         }
-        .btnSave {
+        a{
+            color:white;
+            text-decoration: none;
+        }
+        .btnSv {
             padding: 12px 5px;
             border-radius: 8px;
             font-size: 16px;
             border: none;
+            cursor: pointer;
+            z-index: 1000;
             background: $mainOrange;
         }
     }

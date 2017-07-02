@@ -75,11 +75,16 @@ html body {
     color: #fff; }
     .content .text-wrap .tlt {
       margin: 70px 0; }
-    .content .text-wrap .btnSave {
+    .content .text-wrap a {
+      color: white;
+      text-decoration: none; }
+    .content .text-wrap .btnSv {
       padding: 12px 5px;
       border-radius: 8px;
       font-size: 16px;
       border: none;
+      cursor: pointer;
+      z-index: 1000;
       background: #eaae23; }
 
 body {
