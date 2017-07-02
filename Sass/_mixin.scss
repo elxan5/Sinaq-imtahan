@@ -1,0 +1,60 @@
+@import "variables";
+/*Top Menu*/
+@mixin top-menu {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 0;
+    .nav {
+        float: right;
+        ul {
+            padding: 0;
+            li {
+                cursor: pointer;
+                list-style: none;
+                float: left;
+                padding: 10px 0;
+                margin-right: 25px;
+                font-size: 18px;
+                &:hover {
+                    border-bottom: 2px solid $mainOrange;
+                }
+                &:last-child {
+                    border-bottom: none;
+                    margin-right: 0 !important;
+                }
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+                i {
+                    color: white;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+/* end Top Menu*/
+
+/*MainFont*/
+@mixin mainFont {
+    body,
+    html {
+        @font-face {
+            font-family: 't';
+            src: url(font/latest_fonts/t-webfont.eot);
+            src: url(font/latest_fonts/t-webfontd41d.eot?#iefix) format('embedded-opentype'), url(font/latest_fonts/t-webfont.html) format('woff2'), url(font/latest_fonts/t-webfont.woff) format('woff'), url(font/latest_fonts/t-webfont.ttf) format('truetype');
+            font-weight: 400;
+            font-style: normal
+        }
+        html,
+        body {
+            font-family: 't';
+            transition:.3s ease;
+        }
+    }
+}
+/* end MainFont*/
