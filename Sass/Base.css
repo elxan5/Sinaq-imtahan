@@ -55,7 +55,7 @@ html body {
   right: 0;
   background: #595AB7;
   opacity: .2;
-  z-index: 5; }
+  z-index: 50; }
 
 .activeBorder {
   border-bottom: 2px solid #eaae23; }
@@ -71,6 +71,7 @@ html body {
   top: 0; }
   .content .text-wrap {
     position: relative;
+    z-index: 51;
     top: 150px;
     color: #fff; }
     .content .text-wrap .tlt {
