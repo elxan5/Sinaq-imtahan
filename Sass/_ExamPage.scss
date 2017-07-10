@@ -11,15 +11,16 @@ body {
     }
     #panel {
         .panel-left {
-
             .panelBalance {
                 margin: 50px 0;
                 background: $mainSecond;
                 min-height: 150px;
                 opacity: .5;
                 color: $white;
-                min-width: 300px;
-                clip-path: polygon(25% 0%, 75% 0%, 95% 100%, 4% 100%);
+                min-width: 200px;
+                max-width: 250px;
+
+                // clip-path: polygon(25% 0%, 75% 0%, 95% 100%, 4% 100%);
                 span {
                     display: block;
                     border-bottom: 1px solid $white;
@@ -29,6 +30,9 @@ body {
                     box-shadow: 15px 5px 40px #ccc;
                     &:nth-child(2) {}
                 }
+            }
+            .panelNext{
+                margin-left: 15px;
             }
             .startEx {
                 padding: 14px;
@@ -81,18 +85,58 @@ body {
         .dropSlide {
             width: 100%;
             min-height: 300px;
-            clip-path: polygon(100% 0, 100% 30%, 45% 55%, 0 75%, 0 0);
             background: $mediumgray;
             opacity: .5;
             color: $white;
-            z-index: 3;
+            z-index: 10;
             position: relative;
             h4 {
                 margin: 0;
                 padding: 10px 10px;
             }
-            .panel-right {}
+    
             // padding-left:100px; 
+        }
+        .panel-right{
+              .panel-right {
+                .owl-nav {
+                    .owl-prev {
+                        min-height: 300px;
+                        position: absolute;
+                        min-width: 50px;
+                        top: 0;
+                        left: 0;
+                        z-index: 10000;
+                        background: $lightgray;
+                        opacity: 0;
+                        text-align: center;
+                        &:hover {
+                            opacity: .3;
+                        }
+                    }
+                    .owl-next {
+                        min-height: 300px;
+                        position: absolute;
+                        min-width: 50px;
+                        top: 0;
+                        right: 0;
+                        z-index: 10000;
+                        background: $lightgray;
+                        opacity: 0;
+                        text-align: center;
+                        &:hover {
+                            opacity: .3;
+                        }
+                    }
+                    i {
+                        line-height: 300px;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: #fff;
+                    }
+                }
+                // padding-left:100px; 
+            }
         }
     }
     .mainResult {

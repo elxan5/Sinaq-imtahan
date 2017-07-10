@@ -1,0 +1,127 @@
+.panelRegister {
+    background: #ddd;
+    background-image: url(../img/regImg.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 0;
+    .registerModal {
+        position: relative;
+        padding-top: 10%;
+        z-index: 20;
+        .panelLeft {
+            @include panel-All;
+            .orlogin {
+                p {
+                    color: #333;
+                    font-size: 1.1em;
+                }
+                padding: 5px 0;
+                text-align: center;
+            }
+            .btn-facebook {
+                background-color: #3b5998;
+                color: #fff;
+                opacity: .8;
+                margin-bottom: 10px;
+            }
+            .btn-facebook:hover {
+                background-color: #246193;
+                color: #fff;
+            }
+            .btn-google {
+                background-color: #c23321;
+                opacity: .8;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+            .btn-google:hover {
+                background-color: #fff;
+                color: #c23321;
+            }
+        }
+        .panelRight {
+            @include panel-All;
+            position: relative;
+            top: 50px;
+        }
+        .btnPanel {
+            padding: 10px 0;
+            color: $white;
+        }
+        .btnRegister {
+            background: $mainOrange;
+        }
+    }
+    //     h3 {
+    //         line-height: 20px;
+    //         font-size: 1.5em;
+    //         color: #333;
+    //         padding-bottom: 5px;
+    //     }
+    //     p {
+    //         font-size: 1.2em;
+    //         color: $gray;
+    //     }
+    //     // .sosialRegister{
+    //     // 	background: $lightgray;
+    //     // }
+    //     .modalBorder{
+    //     	min-height: 300px;
+    //        width:2px; 
+    //        position: relative;
+    //     	background: #ccc;
+    //     }
+    //     .leftModalName {
+    //         background: #ccc;
+    //         opacity: .9;
+    //         padding: 5px 0;
+    //         color: #000;
+    //     }
+    //     .orlogin {
+    //         text-align: center;
+    //         padding: 15px 0;
+    //     }
+    //     .btn-facebook {
+    //         background-color: #3b5998;
+    //         color: #fff;
+    //     }
+    //     .btnRegister {
+    //         background: $mainOrange;
+    //         color: $white;
+    //         padding: 10px 0;
+    //     }
+    //     .btnLogin {
+    //         padding: 10px 0;
+    //     }
+    //     .btn-facebook:hover {
+    //         background-color: #246193;
+    //         color: #fff;
+    //     }
+    //     .btn-google {
+    //         background-color: #c23321;
+    //         color: #fff;
+    //     }
+    //     .btn-google:hover {
+    //         background-color: #fff;
+    //         color: #c23321;
+    //     }
+    //     .modal-left {
+    //         @include modal-leftRight;
+    //     }
+    // }
+    // .modal-right {
+    //     @include modal-leftRight;
+    // }
+    // .signUpInfo{
+    // 	padding-bottom:15px; 
+    // }
+}
+
+
+/*Panel Register*/
+
+
+/*end Panel Register*/

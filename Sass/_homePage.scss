@@ -2,50 +2,156 @@
 .TopMenu {
     @include top-menu;
 }
-.mainModal{
-	position: fixed;
-	top:0;
-	bottom: 0;
-	left:0;
-	right: 0;
-	background:$purple;
-	opacity:.2;
-	z-index: 50;
+
+// html,
+// // body {
+// //     overflow: hidden;
+// // }
+
+.mainModal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    background: $purple;
+    opacity: .4;
+    z-index: 5;
 }
-.activeBorder {
-    border-bottom: 2px solid $mainOrange;
+
+.arrow {
+    width: 60px;
+    z-index: 200;
+    height: 82px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    cursor: pointer;
+    bottom: 20px;
 }
+
+
+/* sets arrow style */
+
+.arrow path {
+    stroke: $mainOrange;
+    fill: transparent;
+    stroke-width: 3px;
+    animation: arrow 1.8s infinite;
+    -webkit-animation: arrow 1.8s infinite;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0
+    }
+    25% {
+        opacity: 1
+    }
+    75% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes arrow {
+    0% {
+        opacity: 0
+    }
+    25% {
+        opacity: 1
+    }
+    75% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.arrow path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s;
+}
+
+.arrow path.a2 {
+    animation-delay: -.5s;
+    -webkit-animation-delay: -.5s;
+}
+
+.arrow path.a3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+}
+
+
+/**/
+
+
+/*Content*/
 
 .content {
     background: #ddd;
     background-image: url(../img/img1.jpg);
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
     top: 0;
-    
-    .text-wrap {
+    .content-middle {
+        z-index: 200;
         position: relative;
-        z-index: 51;
-        top: 150px;
+        top: 200px;
         color: $white;
         .tlt {
             margin: 70px 0;
         }
-        a{
-            color:white;
+        a {
+            color: $white;
+            padding: 15px 20px;
             text-decoration: none;
         }
-        .btnSv {
+        .btnSave {
             padding: 12px 5px;
             border-radius: 8px;
             font-size: 16px;
             border: none;
-            cursor: pointer;
-            z-index: 1000;
+            z-index: 280;
             background: $mainOrange;
         }
     }
+    .imgPrev,
+    .imgNext {
+        display: none;
+        i {
+            cursor: pointer;
+            position: relative;
+            top: 50%;
+            left: 25%;
+            text-align: center;
+            font-size: 2.8em;
+            color: $white;
+        }
+        // background: #ddd;
+        opacity: 0;
+        position: absolute;
+        height: 100vh;
+        z-index: 250;
+        width: 50px;
+        float: left;
+        top: 0;
+        bottom: 0;
+    }
+    .imgPrev {
+        left: 0;
+    }
+    .imgNext {
+        right: 0;
+    }
 }
+
+
+/*end Content*/

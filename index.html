@@ -18,12 +18,17 @@
     <!--Header-->
     <div id="Header">
         <div class="mainModal"></div>
+        <svg class="arrow">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg>
         <!--TopMenu-->
         <div class="TopMenu">
             <div class="container-fluid">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-2 logo">
                             <div class="row">
                                 Logo
                             </div>
@@ -32,7 +37,7 @@
                             <div class="row">
                                 <div class="nav">
                                     <ul>
-                                        <li class="activeBorder"><a href="#">Ana Səhifə</a></li>
+                                        <li class="scrollMain"><a href="#">Ana Səhifə</a></li>
                                         <li><a href="#">İmtahan ver</a></li>
                                         <li><a href="#">Haqqinda</a></li>
                                         <li><a href="#">Əlaqə</a></li>
@@ -50,30 +55,239 @@
         <!-- TopMenu -->
         <!-- CONTENT -->
         <section class="content">
+            <div class="imgPrev">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </div>
+            <div class="imgNext">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
             <div class="container-fluid">
-                <div class="text-wrap">
+                <div class="content-middle">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="row">
+<!--                         <div class="row">
+ -->                            <div class="col-md-6">
+                                <!-- <div class="row"> -->
                                     <h3 class="tlt">Lorem ipsum dolor sit amet, consectetur obcaecati quos <br/>vero maiores, explicabo recusandae nulla</h3>
-                                 
                                     <div class="clearfix"></div>
                                     <div class="col-md-3">
                                         <div class="row">
-                                            <button type="button"  class="btn btn-primary btn-block btnSv"><a href="ExamPage.html">Imtahan ver</a></button>
+                                            <button type="button" class="btn btn-primary btn-block btnSave"><a href="ExamPage.html" >Imtahan ver</a>
+                                            </button>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+<!--                                 </div>
+ -->                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="clearfix"></div>
         <!--/Content-->
-    </div>
-    <!--/Header-->
+        <!--Panel Register-->
+        <section class="panelRegister">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="registerModal">
+                            <div class="col-md-4 panelLeft">
+                                <div class="row">
+                                    <div class="col-md-12 ">
+                                        <h2>Giriş</h2>
+                                        <p><i>Zehmet olmasa hesabınıza daxil olun ve ya Qeydiyyatdan keçin...</i></p>
+                                    </div>
+                                </div>
+                                <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                            <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Istifadəçi adı...">
+                                            <span class="help-block"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                            <input type="password" class="form-control" id="password" name="password" value="" placeholder="Parol..." required="" title="Please enter your password">
+                                            <span class="help-block"></span>
+                                        </div>
+                                    </div>
+                                    <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="remember" id="remember">Yadda saxla
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block btnLogin btnPanel">Giriş</button>
+                                    <a href="/forgot/" class="btn btn-default btn-block btnPanel btnRegister">Qeydiyyatdan keç</a>
+                                </form>
+                                <div class="clearfix"></div>
+                                <div class="col-md-12 socialRegister">
+                                    <div class="row">
+                                        <div class="col-md-12 orlogin">
+                                            <p>..or login with:</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a class="btn btn-block pull-left btn-social btn-facebook">
+                                                <span class="fa fa-facebook"></span> Facebook
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a class="btn btn-block btn-social btn-google">
+                                                <span class="fa fa-google"></span> Google
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-md-push-4 panelRight">
+                                <div class="col-md-12 signUpInfo">
+                                    <div class="row">
+                                        <h2>Qeydiyyat</h2>
+                                        <p><i>Aşağıda verilənlərin hamsı doldurulmalıdır...</i></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                            <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Ad...">
+                                            <span class="help-block"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Soyad...">
+                                            <span class="help-block"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Email...">
+                                            <span class="help-block"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                            <input type="password" class="form-control" id="password" name="password" value="" placeholder="Parol..." required="" title="Please enter your password">
+                                            <span class="help-block"></span>
+                                        </div>
+                                    </div>
+                                    <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
+                                    <a href="/forgot/" class="btn btn-default btn-block btnPanel btnRegister">Qeydiyyatdan keç</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="registerModal">
+                        <div class="col-md-4 col-md-push-1 leftModalName">
+                            <div class="col-md-12 ">
+                                <h2>Giriş</h2>
+                                <p><i>Zehmet olmasa hesabınıza daxil olun ve ya Qeydiyyatdan keçin...</i></p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-4 col-md-push-1 modal-left ">
+                            <div class="col-md-3">
+                                Logo
+                            </div>
+                          
+                            <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                        <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Istifadəçi adı...">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                        <input type="password" class="form-control" id="password" name="password" value="" placeholder="Parol..." required="" title="Please enter your password">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember" id="remember">Yadda saxla
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block btnLogin">Login</button>
+                                <a href="/forgot/" class="btn btn-default btn-block btnRegister">Qeydiyyatdan keç</a>
+                            </form>
+                            <div class="clearfix"></div>
+                            <div class="col-md-12 socialRegister">
+                                <div class="row">
+                                    <div class="col-md-12 orlogin">
+                                        <p>..or login with:</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a class="btn btn-block pull-left btn-social btn-facebook">
+                                            <span class="fa fa-facebook"></span> Facebook
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a class="btn btn-block btn-social btn-google">
+                                            <span class="fa fa-google"></span> Google
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-push-3 modal-right">
+                            <div class="col-md-12 signUpInfo">
+                                <div class="row">
+                                    <h2>Qeydiyyat</h2>
+                                    <p><i>Aşağıda verilənlərin hamsı doldurulmalıdır...</i></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                        <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Ad...">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Soyad...">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Email...">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                        <input type="password" class="form-control" id="password" name="password" value="" placeholder="Parol..." required="" title="Please enter your password">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
+                                <a href="/forgot/" class="btn btn-default btn-block btnRegister">Qeydiyyatdan keç</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+ --></div>
+        </section>
+        <!--/ Panel Register-->
+        <!--/Header-->
 </body>
 
 </html>
